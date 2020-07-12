@@ -4,6 +4,11 @@
 {% load staticfiles %}
 
 <head>
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -104,7 +109,7 @@
             <h3>Certifications and Achievements</h3>
             <div class="row">
 
-                {% for job in jobs.all %}
+                {% for job in jobs.all reversed %}
 
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
